@@ -2,20 +2,18 @@ let pokemones = [];
 let totalPokes = 10;
 
 // Conexión para obtener la lista de Pokémon
-async function conexion() {
+async function conexionLista() {
   const res = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=${totalPokes}`);
   const data = await res.json();
-  return data.results;
+  return data;
 }
 
 // Cargar todos los Pokémon al iniciar
 async function General() {
   if (pokemones.length === 0) {
-    pokemones = await conexion();
+    pokemones = await conexionLista();
   }
-  home(pokemones);
-  console.log(pokemones[0].name)
-  
+  Home(pokemones);
 }
 
 General()
