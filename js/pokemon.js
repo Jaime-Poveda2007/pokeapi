@@ -1,6 +1,6 @@
 async function Detalle(h) {
     var root = document.getElementById("root");
-    const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${h}`);
+    const res = await fetch(https://pokeapi.co/api/v2/pokemon/${h});
     const data = await res.json();
 
     // Construir tipos (siempre existen en la API)
@@ -25,6 +25,8 @@ async function Detalle(h) {
             <p>Ataque Especial: ${data.stats[3].base_stat} | Defensa Especial: ${data.stats[4].base_stat}</p>
         </section>
     `;
-
-    root.innerHTML = detalle;
+    <button onClick="toggleFavorito(${data.id}, '${data.name}')">
+        <span id="corazon-${data.id}">${esFavorito ? '❤' : '🤍'}</span> Favorito
+    </button>
+    root.innerHTML = detalle;
 }

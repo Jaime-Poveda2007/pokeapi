@@ -1,30 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>Hola</h1>
     <nav>
-        <button onclick = "Home()">home</button>
-        <button onclick = "informativa()">informativa</button>
-        <button onclick = "favoritos()">favoritos</button>
-        <button onclick = "pokemon()">pokemon</button>
-        <button onclick = "conexion()">conexion</button>
-        <button onclick = "capturados()">capturados</button>
+        <button onclick="Home()">Home</button>
+        <button onclick="Favoritos()">Favoritos</button>
+        <button onclick="conexion()">conexion</button>
+        <button onclick="informativa()">informativa</button>
+        <button onclick="Pokemon()">Pokemon</button>
+        <button onclick="Original_Capturados()">Original/Capturados</button>
         <br><br>
     </nav>
+
     <div id="root">
-        <!-- aqui se agrega lo que hagamos en js -->
     </div>
-    <script src="js/conexion.js"></script>
-    <script src="js/favoritos.js"></script>
-    <script src="js/home.js"></script>
-    <script src="js/pokemon.js"></script>
-    <script src="js/informativa.js"></script>
-    <script src="js/capturados.js"></script>
+
+    <script src="javascript/conexion.js"></script>
+    <script src="javascript/home.js"></script>
+    <script src="javascript/detalle.js"></script>
+    <script src="javascript/favoritos.js"></script>
+    <script src="javascript/informativa.js"></script>
+    <script src="javascript/pokemon.js"></script>
+    <script src="javascript/captura.js"></script>
+    <script src="sript.js"></script>
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", General)
+
+    </script>
+
 </body>
+
 </html>
