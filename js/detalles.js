@@ -22,7 +22,7 @@ function toggleFavorito(paramid, paramname) {
         // Si no está, agregarlo
         favoritos.push({
             name: paramname,
-            url: https://pokeapi.co/api/v2/pokemon/${paramid}/
+            url: `https://pokeapi.co/api/v2/pokemon/${paramid}/`
         });
         esFavorito = true;
     }
@@ -31,15 +31,15 @@ function toggleFavorito(paramid, paramname) {
     localStorage.setItem("favoritos", JSON.stringify(favoritos));
 
     // Actualizar el icono en pantalla (si existe el botón)
-    const boton = document.querySelector(#corazon-${paramid});
-    if (boton) boton.textContent = esFavorito ? "❤" : "🤍";
+    const boton = document.querySelector(`#corazon-${paramid}`);
+    if (boton) boton.textContent = esFavorito ? "❤️" : "🤍";
 }
 
 async function Detalle(parametro) {
     const root = document.getElementById("root");
     root.innerHTML = "";
 
-    const res = await fetch(https://pokeapi.co/api/v2/pokemon/${parametro});
+    const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${parametro}`);
     const data = await res.json();
 
     // Revisar si este Pokémon ya está en favoritos
@@ -67,10 +67,10 @@ async function Detalle(parametro) {
       <p>Ataque Especial: ${data.stats[3].base_stat} / Defensa Especial: ${data.stats[4].base_stat}</p>
 
       <button onClick="toggleFavorito(${data.id}, '${data.name}')">
-        <span id="corazon-${data.id}">${esFavorito ? '❤' : '🤍'}</span> Favorito
+        <span id="corazon-${data.id}">${esFavorito ? '❤️' : '🤍'}</span> Favorito
       </button>
     </section>
   `;
 
-    root.innerHTML = detalle;
+    root.innerHTML = detalle;
 }
