@@ -23,12 +23,12 @@ async function General() {
   if (pokemones.length === 0) {
     pokemones = await conexion("All");
   }
-  Home(pokemones);
+  // ✅ Llamar a Home solo si existe
+  if (typeof Home === 'function') {
+    Home(pokemones);
+  }
   console.log(pokemones[0].name);
 }
-
-General();
-
 
 async function FiltroConexion(filtroElegido) {
   let pokesfiltrados = await conexion(filtroElegido);

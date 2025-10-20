@@ -38,7 +38,7 @@ function Aleatorios(){
     }
 
     document.getElementById("nuevos").innerHTML += pokesAleatorios
-    document.getElementById("contador").innerHTML = ${misNumeros.length} / ${totalPokes};
+    document.getElementById("contador").innerHTML = `${misNumeros.length} / ${totalPokes}`;
 }
 
 
@@ -87,7 +87,7 @@ function Capturados(){
 
     //rangos y capturados
     let contador = document.createElement("p");
-    contador.textContent = ${misNumeros.length} / ${totalPokes};
+    contador.textContent = `${misNumeros.length} / ${totalPokes}`;
     contador.id = "contador"
 
     //añadir al elemento
